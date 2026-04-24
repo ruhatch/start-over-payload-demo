@@ -38,11 +38,11 @@ const columnFields: Field[] = [
     name: 'richText',
     type: 'richText',
     editor: lexicalEditor({
-      features: ({ rootFeatures }) => [
-        ...rootFeatures,
+      features: ({ defaultFeatures }) => [
+        ...defaultFeatures,
+        HeadingFeature(),
         FixedToolbarFeature(),
         InlineToolbarFeature(),
-        AlignFeature(),
       ],
     }),
     label: false,
